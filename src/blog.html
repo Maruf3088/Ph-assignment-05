@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <!--CSS file-->
+    <link rel="stylesheet" href="./output.css">
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="font-lexend">
+    <!--navber section-->
+    <nav id="nav-ber" class="fixed top-0 w-full  transition-all duration-500 shadow-lg z-[1000]">
+        <div id="navber-inner-div" class=" bg-[#F9F7F3] flex flex-col">
+            <div class="container mx-auto flex py-5 justify-between">
+                <!--Blog btn-->
+                <a class="btn bg-[#B4F461] px-8" href="./index.html">Back</a>
+                <!--Logo heading div-->
+                <div class="flex items-center gap-3 ">
+                    <div class="w-[40px]">
+                        <img src="../assets/logo.png" alt="" class="w-[40px]">
+                    </div>
+
+                    <p class="text-2xl hidden md:block font-semibold self-center">Donate Bangladesh</p>
+                </div>
+                <!--Balance div-->
+                <div class="flex items-center gap-2  ">
+                    <div class="w-[20px]">
+                        <img src="../assets/coin.png" alt="">
+                    </div>
+
+                    <p id="total-balance" class="font-semibold text-xl text-gray-600">5500BDT</p>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!--faq section-->
+    <main class="container mx-auto py-40">
+        <div class="flex mb-10 items-center gap-2">
+            <div class="text-3xl md:text-4xl font-bold">Important FAQ</div>
+            <div>
+                <img src="../assets/icons8-faq-50.png" alt="" class="animate-bounce ">
+            </div>
+
+        </div>
+        <div class="flex flex-col gap-5">
+            <div class="collapse collapse-arrow bg-base-500 border border-gray-600 md:p-5 cursor-pointer">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl md:text-2xl font-medium">What is the Document Object Model (DOM)?</div>
+                <div class="collapse-content">
+                    <p class="text-lg md:text-xl text-gray-500">The DOM is a programming interface for web documents, representing them as a tree of objects. It
+                        allows JavaScript to manipulate the structure, content, and style of a webpage.</p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-500 border border-gray-600 md:p-5 cursor-pointer">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl md:text-2xl font-medium">How do you select an element from the DOM?</div>
+                <div class="collapse-content">
+                    <p class="text-lg backdrop:md:text-xl text-gray-500">You can use methods like document.getElementById(), document.querySelector(), or document.getElementsByClassName() to select DOM elements.</p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-500 border border-gray-600 md:p-5 cursor-pointer">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl md:text-2xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+                <div class="collapse-content">
+                    <p class="text-lg md:text-xl text-gray-500">Event delegation is attaching a single event listener to a parent element to manage events for child elements. It improves performance and handles dynamic content efficiently.</p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-500 border border-gray-600 md:p-5 cursor-pointer">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl md:text-2xl font-medium"> How do you manipulate an element's attributes and styles using the DOM?</div>
+                <div class="collapse-content">
+                    <p class="text-lg md:text-xl text-gray-500">Use element.setAttribute(), element.getAttribute(), or element.style.property = value to change attributes and styles. You can also manipulate classes with element.classList.</p>
+                </div>
+            </div>
+            
+            
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

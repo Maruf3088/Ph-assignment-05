@@ -15,18 +15,18 @@
 
 <body class="font-lexend relative">
     <!--Navber section-->
-    <nav id="nav-ber" class="fixed top-0 w-full  transition-all duration-5s00">
-        <div id="navber-inner-div" class=" bg-[#F9F7F3] flex flex-col">
+    <nav id="nav-ber" class="fixed top-0 w-full  transition-all duration-500 ">
+        <div id="navber-inner-div" class=" bg-[#F9F7F3] flex flex-col shadow-lg">
             <div class="container mx-auto flex py-5 justify-between">
                 <!--Blog btn-->
-                <button class="btn bg-[#B4F461] px-8">Blog</button>
+                <a class="btn bg-[#B4F461] px-8" href="./blog.html">Blog</a>
                 <!--Logo heading div-->
                 <div class="flex items-center gap-3 ">
                     <div class="w-[40px]">
                         <img src="../assets/logo.png" alt="" class="w-[40px]">
                     </div>
 
-                    <p class="text-2xl font-semibold self-center">Donate Bangladesh</p>
+                    <p class="text-2xl font-semibold self-center hidden md:block">Donate Bangladesh</p>
                 </div>
                 <!--Balance div-->
                 <div class="flex items-center gap-2  ">
@@ -34,7 +34,7 @@
                         <img src="../assets/coin.png" alt="">
                     </div>
 
-                    <p class="font-semibold text-xl text-gray-600">5500BDT</p>
+                    <p id="total-balance" class="font-semibold text-xl text-gray-600">5500BDT</p>
                 </div>
 
             </div>
@@ -42,10 +42,10 @@
 
         <!--Buttons div-->
         <div>
-            <div class="container mx-auto flex justify-center items-center py-5">
+            <div class="container mx-auto flex justify-center items-center py-8">
                 <div class="flex gap-10">
-                    <button class="btn px-10 bg-[#B4F461] font-semibold">Donation</button>
-                    <button class="btn px-10  font-semibold">History</button>
+                    <button id="donation-btn" class="btn  px-10 bg-[#B4F461]  font-semibold hover:bg-[#B4F461]">Donation</button>
+                    <button id="history-btn" class="btn px-10  font-semibold hover:bg-[#B4F461]">History</button>
                 </div>
             </div>
         </div>
@@ -54,35 +54,36 @@
     <!--Main section-->
     <main>
         <!--Card container-->
-        <div class="container mx-auto py-60 flex flex-col gap-20">
+        <div id="card-container" class="container mx-auto py-60 flex flex-col gap-20">
             <!--Card-01-->
-            <div class="flex ">
-                <div class="w-[50%] flex justify-center">
+            <div class="cards flex flex-col lg:flex-row gap-5 xl:gap-0">
+                <div class="lg:w-[50%] flex justify-center">
                     <img src="../assets/noakhali.png" alt="">
                 </div>
-                <div class="w-[50%] flex flex-col justify-between">
+                <div class="lg:w-[50%] flex flex-col justify-between gap-2">
                     <div class="flex items-center gap-1 px-4 py-3 rounded-lg bg-[#1111110D] self-start">
                         <div class="w-[20px]">
                             <img src="../assets/coin.png" alt="">
                         </div>
-                        <p class="text-gray-500 font-semibold">600 BDT</p>
+                        <p class="donation-value text-gray-500 font-semibold">600 BDT</p>
                     </div>
-                    <div class="font-bold text-xl">Donate for Flood at Noakhali, Bangladesh</div>
+                    <div class="font-bold text-xl">Donate for <span class="title">Flood at Noakhali, Bangladesh</span></div>
                     <div class="text-gray-400"> The recent floods in Noakhali have caused significant damage to homes
                         infrastructure. Your donation will help provide essential supplies and to those affected by this
                         disaster. Every contribution, big or small, makes difference. Please join us in supporting the
                         relief efforts and making a positive impact on the lives of those in need.</div>
                     <div>
                         <input type="text" placeholder="Write Donation Amount"
-                            class="input input-bordered w-full max-w-full" />
+                            class="donation-input input input-bordered w-full max-w-full" />
                     </div>
-                  
+
                     <!-- Open the modal using ID.showModal() method -->
-                    <button class="btn bg-[#B4F461] text-lg font-semibold" onclick="my_modal_1.showModal()">Donate Now</button>
-                    <dialog id="my_modal_1" class="modal">
+                    <button class="donate-now-btn btn bg-[#B4F461] text-lg font-semibold" >Donate Now</button>
+                    <dialog id="my_modal_1" class="modal ">
                         <div class="modal-box  flex flex-col gap-2">
                             <h3 class="text-4xl text-center font-bold">Congrates!</h3>
-                            <div class="w-[50px] mx-auto mt-5"><img src="../assets/coin.png" alt="" class="mx-auto w-full"></div>
+                            <div class="w-[50px] mx-auto mt-5"><img src="../assets/coin.png" alt=""
+                                    class="mx-auto w-full"></div>
                             <p class="py-4 text-center text-gray-600">You Have Donated for Humankind</p>
                             <p class="text-center text-xl font-bold">Successfully</p>
                             <div class=" mx-auto mt-3">
@@ -96,18 +97,18 @@
                 </div>
             </div>
             <!--Card-02-->
-            <div class="flex ">
-                <div class="w-[50%] flex justify-center">
+            <div class="cards flex flex-col lg:flex-row gap-5 xl:gap-0">
+                <div class="lg:w-[50%] flex justify-center">
                     <img src="../assets/feni.png" alt="">
                 </div>
-                <div class="w-[50%] flex flex-col justify-between">
+                <div class="lg:w-[50%] flex flex-col justify-between gap-2">
                     <div class="flex items-center gap-1 px-4 py-3 rounded-lg bg-[#1111110D] self-start">
                         <div class="w-[20px]">
                             <img src="../assets/coin.png" alt="">
                         </div>
-                        <p class="text-gray-500 font-semibold">600 BDT</p>
+                        <p class="donation-value text-gray-500 font-semibold">1000 BDT</p>
                     </div>
-                    <div class="font-bold text-xl">Donate for Flood at Feni, Bangladesh</div>
+                    <div class="font-bold text-xl">Donate for <span class="title">Flood at Feni, Bangladesh</span> </div>
                     <div class="text-gray-400"> The recent floods in Feni, Bangladesh, have wreaked havoc on
                         communities, displacing families and destroying homes. Your donation can provide immediate
                         assistance, including food, clean water, and shelter to those affected by this disaster. Every
@@ -116,14 +117,16 @@
                         challenging time. Together, we can help rebuild hope and resilience in Feni.</div>
                     <div>
                         <input type="text" placeholder="Write Donation Amount"
-                            class="input input-bordered w-full max-w-full" />
+                            class="donation-input input input-bordered w-full max-w-full" />
                     </div>
                     <!-- Open the modal using ID.showModal() method -->
-                    <button class="btn bg-[#B4F461] text-lg font-semibold" onclick="my_modal_1.showModal()">Donate Now</button>
-                    <dialog id="my_modal_2" class="modal">
+                    <button class="donate-now-btn btn bg-[#B4F461] text-lg font-semibold"
+                        >Donate Now</button>
+                    <dialog id="my_modal_2" class="modal  ">
                         <div class="modal-box  flex flex-col gap-2">
                             <h3 class="text-4xl text-center font-bold">Congrates!</h3>
-                            <div class="w-[50px] mx-auto mt-5"><img src="../assets/coin.png" alt="" class="mx-auto w-full"></div>
+                            <div class="w-[50px] mx-auto mt-5"><img src="../assets/coin.png" alt=""
+                                    class="mx-auto w-full"></div>
                             <p class="py-4 text-center text-gray-600">You Have Donated for Humankind</p>
                             <p class="text-center text-xl font-bold">Successfully</p>
                             <div class=" mx-auto mt-3">
@@ -137,18 +140,18 @@
                 </div>
             </div>
             <!--Card-03-->
-            <div class="flex ">
-                <div class="w-[50%] flex justify-center">
+            <div class="cards flex flex-col lg:flex-row gap-5 xl:gap-0">
+                <div class="lg:w-[50%] flex justify-center">
                     <img src="../assets/quota-protest.png" alt="">
                 </div>
-                <div class="w-[50%] flex flex-col justify-between">
+                <div class="lg:w-[50%] flex flex-col justify-between gap-2">
                     <div class="flex items-center gap-1 px-4 py-3 rounded-lg bg-[#1111110D] self-start">
                         <div class="w-[20px]">
                             <img src="../assets/coin.png" alt="">
                         </div>
-                        <p class="text-gray-500 font-semibold">600 BDT</p>
+                        <p class="donation-value text-gray-500 font-semibold">5000 BDT</p>
                     </div>
-                    <div class="font-bold text-xl">Aid for Injured in the Quota Movement</div>
+                    <div class="font-bold text-xl">Aid <span class="title"> for Injured in the Quota Movement</span></div>
                     <div class="text-gray-400"> The Quota Movement has sparked significant unrest, resulting in injuries
                         among many protesters and bystanders. Your support is crucial in providing medical aid and
                         assistance to those injured during these demonstrations. Donations will help cover hospital
@@ -158,13 +161,15 @@
                         can promote justice and compassion for all.</div>
                     <div>
                         <input type="text" placeholder="Write Donation Amount"
-                            class="input input-bordered w-full max-w-full" />
+                            class="donation-input input input-bordered w-full max-w-full" />
                     </div>
-                    <button class="btn bg-[#B4F461] text-lg font-semibold" onclick="my_modal_1.showModal()">Donate Now</button>
+                    <button class="donate-now-btn btn bg-[#B4F461] text-lg font-semibold"
+                       >Donate Now</button>
                     <dialog id="my_modal_3" class="modal">
                         <div class="modal-box  flex flex-col gap-2">
                             <h3 class="text-4xl text-center font-bold">Congrates!</h3>
-                            <div class="w-[50px] mx-auto mt-5"><img src="../assets/coin.png" alt="" class="mx-auto w-full"></div>
+                            <div class="w-[50px] mx-auto mt-5"><img src="../assets/coin.png" alt=""
+                                    class="mx-auto w-full"></div>
                             <p class="py-4 text-center text-gray-600">You Have Donated for Humankind</p>
                             <p class="text-center text-xl font-bold">Successfully</p>
                             <div class=" mx-auto mt-3">
@@ -176,6 +181,28 @@
                         </div>
                     </dialog>
                 </div>
+            </div>
+        </div>
+        <!--History section-->
+        <div id="history-section" class="hidden">
+            <div id="empty-history-alert" class="container mx-auto">
+                <div class="hero bg-base-200 min-h-screen">
+                    <div class="text-center">
+                      <div class="max-w-lg">
+                        <h1 class="text-3xl md:text-5xl font-bold">No Donation History Available</h1>
+                        <p class="py-6">
+                            It looks like you haven’t made any donations yet. Once you contribute to a cause, your donation history will appear here for easy access. Start donating to support meaningful initiatives and track your impact over time!
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <!--History main conatiner-->
+            <div class="history-card-container hidden container mx-auto py-60  flex-col gap-5">
+                <!--card-->
+               
             </div>
         </div>
     </main>
