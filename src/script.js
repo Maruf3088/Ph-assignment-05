@@ -51,10 +51,10 @@ function validation(card, donationInputValue,donationInputStringValue) {
   ) {
     
     card.querySelector(".donation-input").value = "";
-    alert("write valid donation amount");
+    card.querySelector(".modal2").showModal();
     return false;
   } else {
-    card.querySelector("dialog").showModal();
+    card.querySelector(".modal").showModal();
     return true;
   }
 }
@@ -106,7 +106,7 @@ allCard.forEach((card) => {
     );
 
     if(totalDonationFundValue<donationInputValue){
-      alert("insufficient fund!!")
+      card.querySelector(".modal3").showModal();
       card.querySelector(".donation-input").value = "";
     }
 

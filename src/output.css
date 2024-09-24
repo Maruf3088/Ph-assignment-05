@@ -2041,14 +2041,6 @@ details.collapse summary::-webkit-details-marker {
   height: 20vh;
 }
 
-.h-\[300vh\] {
-  height: 300vh;
-}
-
-.h-\[30vh\] {
-  height: 30vh;
-}
-
 .min-h-screen {
   min-height: 100vh;
 }
@@ -2197,11 +2189,6 @@ details.collapse summary::-webkit-details-marker {
 
 .bg-white\/25 {
   background-color: rgb(255 255 255 / 0.25);
-}
-
-.bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
 .p-10 {
