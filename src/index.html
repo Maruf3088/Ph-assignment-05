@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
-<body class="font-lexend relative">
+<body class="font-lexend relative min-h-screen">
     <!--Navber section-->
     <nav id="nav-ber" class="fixed top-0 w-full  transition-all duration-500 ">
         <div id="navber-inner-div" class=" bg-[#F9F7F3] flex flex-col shadow-lg">
@@ -44,7 +44,8 @@
         <div>
             <div class="container mx-auto flex justify-center items-center py-8">
                 <div class="flex gap-10">
-                    <button id="donation-btn" class="btn  px-10 bg-[#B4F461]  font-semibold hover:bg-[#B4F461]">Donation</button>
+                    <button id="donation-btn"
+                        class="btn  px-10 bg-[#B4F461]  font-semibold hover:bg-[#B4F461]">Donation</button>
                     <button id="history-btn" class="btn px-10  font-semibold hover:bg-[#B4F461]">History</button>
                 </div>
             </div>
@@ -67,7 +68,8 @@
                         </div>
                         <p class="donation-value text-gray-500 font-semibold">600 BDT</p>
                     </div>
-                    <div class="font-bold text-xl">Donate for <span class="title">Flood at Noakhali, Bangladesh</span></div>
+                    <div class="font-bold text-xl">Donate for <span class="title">Flood at Noakhali, Bangladesh</span>
+                    </div>
                     <div class="text-gray-400"> The recent floods in Noakhali have caused significant damage to homes
                         infrastructure. Your donation will help provide essential supplies and to those affected by this
                         disaster. Every contribution, big or small, makes difference. Please join us in supporting the
@@ -78,7 +80,7 @@
                     </div>
 
                     <!-- Open the modal using ID.showModal() method -->
-                    <button class="donate-now-btn btn bg-[#B4F461] text-lg font-semibold" >Donate Now</button>
+                    <button class="donate-now-btn btn bg-[#B4F461] text-lg font-semibold">Donate Now</button>
                     <dialog id="my_modal_1" class="modal ">
                         <div class="modal-box  flex flex-col gap-2">
                             <h3 class="text-4xl text-center font-bold">Congrates!</h3>
@@ -108,7 +110,8 @@
                         </div>
                         <p class="donation-value text-gray-500 font-semibold">1000 BDT</p>
                     </div>
-                    <div class="font-bold text-xl">Donate for <span class="title">Flood at Feni, Bangladesh</span> </div>
+                    <div class="font-bold text-xl">Donate for <span class="title">Flood at Feni, Bangladesh</span>
+                    </div>
                     <div class="text-gray-400"> The recent floods in Feni, Bangladesh, have wreaked havoc on
                         communities, displacing families and destroying homes. Your donation can provide immediate
                         assistance, including food, clean water, and shelter to those affected by this disaster. Every
@@ -120,8 +123,7 @@
                             class="donation-input input input-bordered w-full max-w-full" />
                     </div>
                     <!-- Open the modal using ID.showModal() method -->
-                    <button class="donate-now-btn btn bg-[#B4F461] text-lg font-semibold"
-                        >Donate Now</button>
+                    <button class="donate-now-btn btn bg-[#B4F461] text-lg font-semibold">Donate Now</button>
                     <dialog id="my_modal_2" class="modal  ">
                         <div class="modal-box  flex flex-col gap-2">
                             <h3 class="text-4xl text-center font-bold">Congrates!</h3>
@@ -151,7 +153,8 @@
                         </div>
                         <p class="donation-value text-gray-500 font-semibold">5000 BDT</p>
                     </div>
-                    <div class="font-bold text-xl">Aid <span class="title"> for Injured in the Quota Movement</span></div>
+                    <div class="font-bold text-xl">Aid <span class="title"> for Injured in the Quota Movement</span>
+                    </div>
                     <div class="text-gray-400"> The Quota Movement has sparked significant unrest, resulting in injuries
                         among many protesters and bystanders. Your support is crucial in providing medical aid and
                         assistance to those injured during these demonstrations. Donations will help cover hospital
@@ -163,8 +166,7 @@
                         <input type="text" placeholder="Write Donation Amount"
                             class="donation-input input input-bordered w-full max-w-full" />
                     </div>
-                    <button class="donate-now-btn btn bg-[#B4F461] text-lg font-semibold"
-                       >Donate Now</button>
+                    <button class="donate-now-btn btn bg-[#B4F461] text-lg font-semibold">Donate Now</button>
                     <dialog id="my_modal_3" class="modal">
                         <div class="modal-box  flex flex-col gap-2">
                             <h3 class="text-4xl text-center font-bold">Congrates!</h3>
@@ -188,25 +190,33 @@
             <div id="empty-history-alert" class="container mx-auto">
                 <div class="hero bg-base-200 min-h-screen">
                     <div class="text-center">
-                      <div class="max-w-lg">
-                        <h1 class="text-3xl md:text-5xl font-bold">No Donation History Available</h1>
-                        <p class="py-6">
-                            It looks like you haven’t made any donations yet. Once you contribute to a cause, your donation history will appear here for easy access. Start donating to support meaningful initiatives and track your impact over time!
-                        </p>
-                        
-                      </div>
+                        <div class="max-w-lg">
+                            <h1 class="text-3xl md:text-5xl font-bold">No Donation History Available</h1>
+                            <p class="py-6">
+                                It looks like you haven’t made any donations yet. Once you contribute to a cause, your
+                                donation history will appear here for easy access. Start donating to support meaningful
+                                initiatives and track your impact over time!
+                            </p>
+
+                        </div>
                     </div>
-                  </div>
+                </div>
             </div>
 
             <!--History main conatiner-->
             <div class="history-card-container hidden container mx-auto py-60  flex-col gap-5">
                 <!--card-->
-               
+
             </div>
         </div>
     </main>
-    <script src="./script.js"></script>
+
+    <!--Footer section-->
+    <footer class="w-full h-[20vh] bg-slate-100 flex justify-center items-center text-gray-500 absolute bottom-0">
+        <p>Copyright © 2024||Created By Maruf Islam</p>
+    </footer>
+
+    <script type="module" src="./script.js"></script>
 </body>
 
 </html>

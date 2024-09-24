@@ -43,9 +43,9 @@ historyBtn.addEventListener("click", () => {
 });
 
 //input validation
-function validation(card, donationInputValue) {
+function validation(card, donationInputValue,donationInputStringValue) {
   if (
-    isNaN(donationInputValue) ||
+    isNaN(donationInputStringValue) || isNaN(donationInputValue) ||
     donationInputValue < 0 ||
     donationInputValue === ""
   ) {
@@ -96,6 +96,8 @@ allCard.forEach((card) => {
 
   //donate now button work
   donateNowBtn.addEventListener("click", () => {
+    const donationInputStringValue = card.querySelector(".donation-input").value;
+    
     const donationInputValue = parseInt(
       card.querySelector(".donation-input").value
     );
@@ -108,7 +110,7 @@ allCard.forEach((card) => {
       card.querySelector(".donation-input").value = "";
     }
 
-    else if (validation(card, donationInputValue)) {
+    else if (validation(card, donationInputValue ,donationInputStringValue)) {
       donationValue += donationInputValue;
       card.querySelector(".donation-value").innerText = `${donationValue} BDT`;
       totalDonationFundValue -= donationInputValue;
@@ -126,3 +128,4 @@ allCard.forEach((card) => {
     }
   });
 });
+
